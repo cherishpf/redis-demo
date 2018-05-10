@@ -20,11 +20,20 @@ public interface UserService {
 	List<User> queryUserList(String userName);
 	
 	/**
-     * 查询用户名字
+     * 查询用户
      *
      * @param info
      * @return
      */
 
 	User queryUser(Integer userID);
+	
+	/**
+     * 查询用户名字
+     *
+     * @param info
+     * @return
+     */
+
+	String queryUserName(Integer userID);
 }

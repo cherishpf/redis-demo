@@ -24,5 +24,4 @@ public class User implements Serializable {
 	private String 	userOrganization;
 	private String userArea;
 	private String checkCode;
-
 }
