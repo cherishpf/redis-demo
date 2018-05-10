@@ -81,6 +81,7 @@ public class UserServiceImpl implements UserService {
 	
 	// 使用自定义缓存注解(加载application.properties中的redis连接信息)
 	// expire过期时间（秒），-1永不过期
+	// redis缓存  key以String数据类型存储，value以序列化的数据存储
 	@Override
 	@RedisCacheable(cacheKey = "#userID", expire = 3600)
 	public User queryUser(Integer userID) {
