@@ -63,7 +63,8 @@ public class UserServiceImpl implements UserService {
 		User user = new User();
 		user.setUserName(userName);
 		userList = userDAO.select(user);
-		// 写入Redis缓存
+		// 写入Redis缓存，如果需要设置过期时间，先设置过期时间，后执行写入方法
+//		cache.setTimeOut(7200);
 		cache.putObject(userName, userList);
 		return userList;
 	}	
