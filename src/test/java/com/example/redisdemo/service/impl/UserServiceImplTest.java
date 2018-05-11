@@ -29,23 +29,29 @@ public class UserServiceImplTest {
 	
 	@Test
 	public void testQueryUserList() {
-//		List<User> userList = userService.queryUserList("ypf01");
-//		log.info("第一次查询返回数据： " + userList);
-//		
-//		List<User> userList1 = userService.queryUserList("ypf01");
-//		log.info("第二次查询返回数据： " + userList1);
+		List<User> userList = userService.queryUserList("ypf01");
+		log.info("第一次查询返回数据： " + userList);
 		
+		List<User> userList1 = userService.queryUserList("ypf01");
+		log.info("第二次查询返回数据： " + userList1);
+	}
+	
+	@Test
+	public void testQueryUser() {
 		User user1 = userService.queryUser(131);
 		log.info("第1次查询返回数据： " + user1);
 		
 		User user2 = userService.queryUser(131);
 		log.info("第2次查询返回数据： " + user2);
+	}
+	
+	@Test
+	public void testQueryUserName() {
+		String userName1 = userService.queryUserName(131);
+		log.info("第1次查询返回数据： " + userName1);
 		
-//		String userName1 = userService.queryUserName(131);
-//		log.info("第1次查询返回数据： " + userName1);
-//		
-//		String userName2 = userService.queryUserName(131);
-//		log.info("第2次查询返回数据： " + userName2);
+		String userName2 = userService.queryUserName(131);
+		log.info("第2次查询返回数据： " + userName2);
 	}
 
 }
